@@ -170,3 +170,6 @@ dist
 
 #JetBrains
 .idea
+index.js
+src/*.js
+tests/*.js

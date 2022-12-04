@@ -2,9 +2,10 @@ import {lookupIdent, Token, TokenType} from './token';
 
 const ZERO = '';
 const WHITE_SPACES = [' ', '\t', '\n', '\r']
+const DIGIT_EXPRESSION = /^\d$/;
 
 function isDigit(ch: string): boolean {
-    return !WHITE_SPACES.includes(ch) && !isNaN(+ch)
+    return DIGIT_EXPRESSION.test(ch);
 }
 
 export class Lexer {
@@ -48,8 +49,7 @@ export class Lexer {
 
     nextToken(): Token {
         this.skipWhitespace();
-        let token: Token = null;
-
+        let token: Token | null = null;
         switch (this.ch) {
             case '=':
                 token = this.endsWithEqual(TokenType.ASSIGN, TokenType.EQ)

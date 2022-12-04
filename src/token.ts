@@ -32,22 +32,25 @@ export enum TokenType {
     STRING = 'STRING',
 }
 
-const KEYWORDS = {
-    'fn': TokenType.FUNCTION,
-    'let': TokenType.LET,
-    'true': TokenType.TRUE,
-    'false': TokenType.FALSE,
-    'if': TokenType.IF,
-    'else': TokenType.ELSE,
-    'return': TokenType.RETURN,
-}
-
 export function lookupIdent(value: string): TokenType {
-    const tokenType = KEYWORDS[value]
-    if (tokenType === undefined) {
-        return TokenType.IDENT
+    switch (value) {
+        case 'fn':
+            return TokenType.FUNCTION;
+        case 'let':
+            return TokenType.LET;
+        case 'true':
+            return TokenType.TRUE;
+        case 'false':
+            return TokenType.FALSE;
+        case 'if':
+            return TokenType.IF;
+        case 'else':
+            return TokenType.ELSE;
+        case 'return':
+            return TokenType.RETURN;
+        default:
+            return TokenType.IDENT
     }
-    return tokenType;
 }
 
 export class Token {
