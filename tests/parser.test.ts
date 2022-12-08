@@ -12,10 +12,8 @@ import {
 } from '../src/ast';
 import {Pair, Triple} from '../src/utils';
 import {Parser} from '../src/parser';
+import {fail} from './utils';
 
-function fail(error: string) {
-    throw new Error(error)
-}
 
 function createProgram(input: string): Program {
     const lexer = new Lexer(input);

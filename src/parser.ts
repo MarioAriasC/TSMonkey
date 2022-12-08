@@ -129,11 +129,12 @@ export class Parser {
             }
             this.nextToken()
             const value = this.parseExpression(Precedence.LOWEST)
-            if (key != null && value != null) {
+            /*if (key !== null && value !== null) {
                 pairs.set(key, value)
             } else {
                 throw new Error(`key:${key} or value:${value} are null`)
-            }
+            }*/
+            pairs.set(key!!, value!!)
             if (!this.peekTokenIs(TokenType.RBRACE) && !this.expectPeek(TokenType.COMMA)) {
                 return null
             }
@@ -213,6 +214,7 @@ export class Parser {
     )
 
     constructor(private lexer: Lexer) {
+        this.lexer = lexer
         this.nextToken();
         this.nextToken();
     }

@@ -10,7 +10,8 @@ function isDigit(ch: string): boolean {
 
 export class Lexer {
 
-    constructor(private input: string) {
+    constructor(private readonly input: string) {
+        this.input = input
         this.readChar();
     }
 

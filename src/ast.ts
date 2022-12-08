@@ -111,7 +111,7 @@ export class InfixExpression extends Statement {
     }
 }
 
-type ExpressionList = Array<Expression | null> | null
+export type ExpressionList = Array<Expression | null> | null
 
 export class CallExpression extends Statement {
     constructor(token: Token, public fun: Expression | null, public args: ExpressionList) {
