@@ -26,7 +26,7 @@ bun --version
 ```
 
 ```
-0.4.0
+1.0.21
 ```
 
 | Command                | Description                                        |
