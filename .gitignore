@@ -174,3 +174,5 @@ index.js
 benchmark.js
 src/*.js
 tests/*.js
+
+fibonacci
