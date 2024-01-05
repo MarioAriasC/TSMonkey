@@ -12,8 +12,8 @@ TSMonkey has many sibling implementations
 
 ## Status
 
-The book ([Writing An Interpreter In Go](https://interpreterbook.com/)) is fully implemented. Bruno will not have a
-compiler implementation
+The book ([Writing An Interpreter In Go](https://interpreterbook.com/)) is fully implemented. 
+TSMonkey will not have a compiler implementation
 
 ## Commands
 
@@ -26,7 +26,7 @@ bun --version
 ```
 
 ```
-0.3.0
+0.4.0
 ```
 
 | Command                | Description                                        |
